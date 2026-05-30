@@ -1,180 +1,207 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="ku" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عقارات آرام محمد</title>
-    
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عقارات ئارام محمد</title>
 
-        body {
-            background-color: #f4f6f9;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-        .container {
-            background-color: #ffffff;
-            width: 100%;
-            max-width: 450px;
-            border-radius: 24px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            padding: 35px 25px;
-            text-align: center;
-            border: 1px solid rgba(0,0,0,0.05);
-        }
+body{\nbackground:#0b0b0b;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+color:white;
+}
 
-        .logo-container {
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto 20px;
-            box-shadow: 0 8px 20px rgba(30, 60, 114, 0.3);
-        }
+.card{
+width:370px;
+background:linear-gradient(160deg,#0b0905,#1a1408 45%,#0e0c07);
+border-radius:24px;
+padding:28px 22px;
+position:relative;
+overflow:hidden;
+box-shadow:0 20px 60px rgba(0,0,0,.8);
+border:1px solid rgba(201,168,76,.15);
+}
 
-        .logo-container svg {
-            width: 50px;
-            height: 50px;
-            fill: white;
-        }
+.glow{
+position:absolute;
+top:-80px;
+right:-80px;
+width:220px;
+height:220px;
+background:radial-gradient(circle,rgba(201,168,76,.25),transparent 70%);
+border-radius:50%;
+}
 
-        h1 {
-            font-size: 24px;
-            color: #1e3c72;
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
+.top{
+display:flex;
+align-items:center;
+gap:15px;
+margin-bottom:28px;
+border-bottom:1px solid rgba(201,168,76,.15);
+padding-bottom:18px;
+}
 
-        .subtitle {
-            font-size: 14px;
-            color: #777;
-            margin-bottom: 30px;
-        }
+.avatar{
+width:65px;
+height:65px;
+border-radius:18px;
+border:2px solid #C9A84C;
+box-shadow:0 0 15px rgba(201,168,76,.3);
+object-fit:cover;
+}
 
-        .links-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
+.title-area h2{
+font-size:20px;
+color:#fff;
+font-weight:700;
+margin-bottom:4px;
+}
 
-        .link-btn {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #ffffff;
-            color: #2a5298;
-            text-decoration: none;
-            padding: 16px 20px;
-            border-radius: 16px;
-            font-size: 16px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid #e2e8f0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-        }
+.title-area p{
+font-size:12px;
+color:#C9A84C;
+letter-spacing:0.5px;
+}
 
-        .link-btn:hover {
-            background-color: #1e3c72;
-            color: #ffffff;
-            border-color: #1e3c72;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(30, 60, 114, 0.2);
-        }
+.btn{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:12px;
+width:100%;
+padding:15px;
+margin-bottom:14px;
+border-radius:16px;
+text-decoration:none;
+font-weight:bold;
+font-size:15px;
+transition:all .3s ease;
+}
 
-        .link-btn:active {
-            transform: translateY(-1px);
-        }
+.facebook{
+background:#1877F2;
+color:white;
+box-shadow:0 4px 15px rgba(24,119,242,.3);
+}
 
-        .icon-right {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+.tiktok{
+background:white;
+color:black;
+box-shadow:0 4px 15px rgba(255,255,255,.15);
+}
 
-        .icon-right svg {
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
-        }
+.call{
+background:linear-gradient(90deg,#C9A84C,#EEDAA2);
+color:#0b0b0b;
+box-shadow:0 4px 20px rgba(201,168,76,.3);
+}
 
-        .arrow-icon {
-            width: 18px;
-            height: 18px;
-            fill: currentColor;
-            opacity: 0.6;
-            transform: scaleX(-1);
-        }
+.whatsapp-btn{
+background:#25D366;
+color:white;
+box-shadow:0 4px 15px rgba(37,211,102,.3);
+}
 
-        .footer {
-            margin-top: 35px;
-            font-size: 12px;
-            color: #aaa;
-        }
-    </style>
+.btn:hover{
+transform:translateY(-3px);
+filter:brightness(1.1);
+}
+
+details{
+background:rgba(255,255,255,.03);
+border:1px solid rgba(201,168,76,.1);
+border-radius:16px;
+margin-bottom:14px;
+overflow:hidden;
+}
+
+summary{
+padding:15px;
+font-weight:bold;
+color:#C9A84C;
+cursor:pointer;
+list-style:none;
+display:flex;
+justify-content:between;
+align-items:center;
+}
+
+.info{
+display:flex;
+justify-content:space-between;
+margin-bottom:10px;
+font-size:14px;
+border-bottom:1px dashed rgba(255,255,255,.05);
+padding-bottom:6px;
+}
+</style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="logo-container">
-            <svg viewBox="0 0 24 24">
-                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-            </svg>
-        </div>
+<div class="card">
+<div class="glow"></div>
 
-        <h1>عقارات آرام محمد</h1>
-        <p class="subtitle">بۆ کڕین و فرۆشتنی خانوو و زەوی و زار</p>
+<div class="top">
+<img class="avatar" src="https://img.icons8.com/fluent/96/000000/real-estate.png" alt="Logo">
+<div class="title-area">
+<h2>عقارات ئارام محمد</h2>
+<p>بۆ کڕین و فرۆشتنی خانوو و زەوی و زار</p>
+</div>
+</div>
 
-        <div class="links-wrapper">
-            <a href="https://www.facebook.com/share/15b9b8K8YV/?mibextid=wwXIfr" class="link-btn" target="_blank">
-                <div class="icon-right">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                    </svg>
-                    <span>پەیجی فەیسبووک</span>
-                </div>
-                <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
+<a class="btn facebook" target="_blank" href="https://www.facebook.com/share/15b9b8K8YV/?mibextid=wwXIfr">
+🔵 پەیجی فەیسبووک
+</a>
 
-            <a href="https://www.tiktok.com/@aram_mohamad_office?_t=ZS-8t6pGo7C7wY&_r=1" class="link-btn" target="_blank">
-                <div class="icon-right">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.05 1.62 4.2 1.22 1.4 2.97 2.22 4.81 2.44v3.82c-1.63-.12-3.2-.67-4.54-1.58-.37-.25-.72-.54-1.04-.85v6.5c.01 1.94-.49 3.89-1.47 5.53-1.74 3.01-5.12 4.93-8.61 4.79-3.7-.09-7.15-2.61-8.39-6.1-1.39-3.83-.16-8.35 3.04-10.82 1.86-1.48 4.24-2.19 6.59-1.93v3.86c-1.37-.34-2.88-.04-3.99.82-1.2 1.01-1.73 2.67-1.35 4.19.43 1.76 2.05 3.04 3.87 2.97 1.98-.01 3.65-1.59 3.8-3.56.03-1.22.01-2.44.02-3.66 0-3.33-.01-6.66 0-10z"/>
-                    </svg>
-                    <span>هەژماری تیک تۆک</span>
-                </div>
-                <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
+<a class="btn tiktok" target="_blank" href="https://www.tiktok.com/@aram_mohamad_office?_t=ZS-8t6pGo7C7wY&_r=1">
+⚫ هەژماری تیک تۆک
+</a>
 
-            <a href="tel:07701526320" class="link-btn" style="border-color: #4ade80; color: #16a34a;">
-                <div class="icon-right">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                    </svg>
-                    <span>پەیوەندی بکە (٠٧٧٠١٥٢٦٣٢٠)</span>
-                </div>
-                <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-        </div>
+<details>
+<summary>📂 زانیاری زەوی و خانوو (بۆ فرۆشتن)</summary>
+<div style="padding:15px;display:flex;flex-direction:column;gap:15px;">
 
-        <div class="footer">
-            &copy; ٢٠٢٦ عقارات آرام محمد - هەموو مافەکان پارێزراون
-        </div>
-    </div>
+<div style="padding:18px;border:1px solid rgba(201,168,76,.45);border-radius:18px;background:linear-gradient(180deg,rgba(201,168,76,.08),rgba(255,255,255,.02));">
+<h3 style="color:#F0D080;margin-bottom:12px;">LAND #01</h3>
+<div class=\"info\"><span>📍 شوێن</span><span>کەنەکێش نزیک فۆڕمۆڵا</span></div>
+<div class="info"><span>📐 رووبەر</span><span>200m²</span></div>
+<div class="info"><span>🆔 ژمارەی زەوی</span><span>11/249</span></div>
+<div class="info"><span>💰 نرخ</span><span>250$ و مامەڵە</span></div>
+<a class="btn whatsapp-btn" href="https://wa.me/9647748146200">پەیوەندی واتساپ</a>
+</div>
+
+<div style="padding:18px;border:1px solid rgba(201,168,76,.45);border-radius:18px;background:linear-gradient(180deg,rgba(201,168,76,.08),rgba(255,255,255,.02));">
+<h3 style="color:#F0D080;margin-bottom:12px;">LAND #02</h3>
+<div class="info"><span>📍 شوێن</span><span>نزیک بەرێوەبەرایەتی هاتووچۆی سلێمانی</span></div>
+<div class="info"><span>📐 رووبەر</span><span>249m²</span></div>
+<div class="info"><span>🆔 ژمارەی زەوی</span><span>43/965</span></div>
+<div class="info"><span>💰 نرخ</span><span>135$ و مامەڵە</span></div>
+<a class="btn whatsapp-btn" href="https://wa.me/9647748146200">پەیوەندی واتساپ</a>
+</div>
+
+</div>
+</details>
+
+<a class="btn call" href="tel:07748146200">
+📞 پەیوەندی بکە
+</a>
+
+<a class="btn whatsapp-btn" target="_blank" href="https://wa.me/9647748146200">
+🟢 نامە ناردن بۆ واتساپ
+</a>
+
+</div>
 
 </body>
 </html>
-
